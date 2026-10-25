@@ -172,6 +172,12 @@ The request body uses Bean Validation annotations and a custom `FutureTimestampV
 
 ## Tests and coverage
 
+The core limiter behavior is covered in:
+- `src/test/java/com/moovup/LeakyBucketLimiter/service/BucketLimiterServiceTest.java`
+- `src/test/java/com/moovup/LeakyBucketLimiter/controller/BucketControllerTest.java`
+
+`BucketLimiterServiceTest` focuses on the business logic and state transitions for the leaky bucket. `BucketControllerTest` covers the REST API behaviors such as validation, success responses, and missing-user handling.
+
 Run all tests:
 
 ```powershell
